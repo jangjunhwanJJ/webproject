@@ -4,7 +4,6 @@
 <%@page import="java.time.LocalDate"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-String search = request.getParameter("search");
 LocalDate today = LocalDate.now();
 LocalDate firstDayOfThisMonth = LocalDate.now().withDayOfMonth(1);
 int firstDayWeekday = firstDayOfThisMonth.getDayOfWeek().getValue();
@@ -14,7 +13,7 @@ LocalDate lastDayOfThisMonth = LocalDate.now().withDayOfMonth(today.lengthOfMont
 <html>
 <head>
 <meta charset="UTF-8">
-<title>당신은 진정한 옵지인</title>
+<title>상담일지</title>
 <style type="text/css">
 * { padding: 0; margin: 0; border: 0; }
 html, body, #wrap { min-height: 100%; }
@@ -54,13 +53,7 @@ a:hover {text-decoration: none; color: ffffff;}
 			<%@include file="./menu/right.jsp"%>
 		</div>
 		<div id="contents_print">
-			<br>
-			<font size="20">첫화면</font>
-			<h1>헤더1</h1>
-			<h2>헤더2</h2>
-			<h3>헤더3</h3>
-			<h4>헤더4</h4>
-			
+			내 정보 화면
 		</div>
 	</div>
 </div>
